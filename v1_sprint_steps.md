@@ -108,18 +108,18 @@
 > **Hedef:** Anlamlı ve tutarlı hata yanıtları dönen bir yapı kurmak  
 > **Öğrenilecek:** @ControllerAdvice, @ExceptionHandler, Custom Exception, HTTP Status Codes
 
-- [ ] **Adım 4.1** — Custom Exception sınıflarını oluştur
+- [x] **Adım 4.1** — Custom Exception sınıflarını oluştur
   - `exception/ResourceNotFoundException.java` → 404
   - `exception/DuplicateResourceException.java` → 409
   - `exception/UnauthorizedException.java` → 401
-- [ ] **Adım 4.2** — `exception/GlobalExceptionHandler.java` oluştur
+- [x] **Adım 4.2** — `exception/GlobalExceptionHandler.java` oluştur
   - `@RestControllerAdvice` ile merkezi hata yakalama
   - `MethodArgumentNotValidException` → Validation hataları (400)
   - `ResourceNotFoundException` → 404
   - `DuplicateResourceException` → 409
   - `UnauthorizedException` → 401
   - Genel `Exception` → 500
-- [ ] **Adım 4.3** — Hata yanıt formatı tanımla
+- [x] **Adım 4.3** — Hata yanıt formatı tanımla
   ```json
   {
     "success": false,
@@ -128,7 +128,7 @@
     "status": 404
   }
   ```
-- [ ] **Adım 4.4** — Commit: `feat: add global exception handling`
+- [x] **Adım 4.4** — Commit: `feat: add global exception handling`
 
 ### 📦 Çıktı
 - Tüm hatalar tutarlı JSON formatında dönüyor
