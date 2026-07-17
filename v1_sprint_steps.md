@@ -81,22 +81,22 @@
 > **Hedef:** İstemci ile sunucu arasındaki veri taşıma modellerini oluşturmak  
 > **Öğrenilecek:** DTO pattern, Request/Response ayrımı, Java Record, Mapper
 
-- [ ] **Adım 3.1** — Request DTO'ları oluştur
+- [x] **Adım 3.1** — Request DTO'ları oluştur
   - `dto/request/RegisterRequest.java` → `firstName`, `lastName`, `email`, `password`
   - `dto/request/LoginRequest.java` → `email`, `password`
   - `dto/request/CreatePostRequest.java` → `title`, `description`, `animalType`, `city`, `district`, `contactInfo`
   - `dto/request/UpdatePostRequest.java` → Aynı alanlar (opsiyonel güncellenebilir)
-- [ ] **Adım 3.2** — Response DTO'ları oluştur
+- [x] **Adım 3.2** — Response DTO'ları oluştur
   - `dto/response/AuthResponse.java` → `token`, `email`, `firstName`
   - `dto/response/PostResponse.java` → Tüm ilan alanları + `ownerName`
   - `dto/response/UserResponse.java` → `id`, `firstName`, `lastName`, `email`
   - `dto/response/ApiResponse.java` → Generic wrapper: `success`, `message`, `data`
-- [ ] **Adım 3.3** — Validation annotation'ları ekle
+- [x] **Adım 3.3** — Validation annotation'ları ekle
   - `@NotBlank`, `@Email`, `@Size(min, max)`, `@NotNull`
-- [ ] **Adım 3.4** — Mapper sınıflarını oluştur
+- [x] **Adım 3.4** — Mapper sınıflarını oluştur
   - `mapper/UserMapper.java` → `toResponse(User)`, `toEntity(RegisterRequest)`
   - `mapper/PostMapper.java` → `toResponse(Post)`, `toEntity(CreatePostRequest, User)`
-- [ ] **Adım 3.5** — Commit: `feat: add DTOs, validation and mappers`
+- [x] **Adım 3.5** — Commit: `feat: add DTOs, validation and mappers`
 
 ### 📦 Çıktı
 - Request/Response DTO'ları validation ile hazır
