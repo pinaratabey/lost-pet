@@ -50,26 +50,26 @@
 > **Hedef:** Veritabanı tablolarını Java sınıflarıyla tanımlamak  
 > **Öğrenilecek:** JPA Entity, Annotations, Enum, Repository, Entity İlişkileri
 
-- [ ] **Adım 2.1** — Enum sınıflarını oluştur
+- [x] **Adım 2.1** — Enum sınıflarını oluştur
   - `enums/Role.java` → `USER`, `ADMIN`
   - `enums/AnimalType.java` → `DOG`, `CAT`, `BIRD`, `OTHER`
   - `enums/PostStatus.java` → `ACTIVE`, `FOUND`, `CLOSED`
-- [ ] **Adım 2.2** — `entity/User.java` Entity sınıfını oluştur
+- [x] **Adım 2.2** — `entity/User.java` Entity sınıfını oluştur
   - Alanlar: `id`, `firstName`, `lastName`, `email` (unique), `password`, `role`, `createdAt`
   - Annotations: `@Entity`, `@Table`, `@Id`, `@GeneratedValue`, `@Column`, `@Enumerated`, `@CreationTimestamp`
   - Lombok: `@Data`, `@NoArgsConstructor`, `@AllArgsConstructor`, `@Builder`
-- [ ] **Adım 2.3** — `entity/Post.java` Entity sınıfını oluştur
+- [x] **Adım 2.3** — `entity/Post.java` Entity sınıfını oluştur
   - Alanlar: `id`, `title`, `description`, `animalType`, `city`, `district`, `contactInfo`, `status`, `createdAt`, `updatedAt`
   - İlişki: `@ManyToOne` → User (bir kullanıcının birden fazla ilanı olabilir)
   - `@JoinColumn(name = "user_id")`
-- [ ] **Adım 2.4** — `repository/UserRepository.java` oluştur
+- [x] **Adım 2.4** — `repository/UserRepository.java` oluştur
   - `Optional<User> findByEmail(String email)`
   - `Boolean existsByEmail(String email)`
-- [ ] **Adım 2.5** — `repository/PostRepository.java` oluştur
+- [x] **Adım 2.5** — `repository/PostRepository.java` oluştur
   - `List<Post> findByUserId(Long userId)`
   - `List<Post> findByStatus(PostStatus status)`
-- [ ] **Adım 2.6** — Uygulamayı çalıştır, tabloların oluştuğunu PostgreSQL'de doğrula
-- [ ] **Adım 2.7** — Commit: `feat: add User and Post entities with repositories`
+- [x] **Adım 2.6** — Uygulamaı çalıştır, tabloların oluştuğunu PostgreSQL'de doğrula
+- [x] **Adım 2.7** — Commit: `feat: add User and Post entities with repositories`
 
 ### 📦 Çıktı
 - PostgreSQL'de `users` ve `posts` tabloları otomatik oluşmuş durumda
