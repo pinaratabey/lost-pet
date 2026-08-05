@@ -140,19 +140,19 @@
 > **Hedef:** İş mantığını controller'dan ayırarak service katmanında toplamak  
 > **Öğrenilecek:** @Service, @Transactional, Business Logic, Entity-DTO dönüşümü
 
-- [ ] **Adım 5.1** — `service/UserService.java` oluştur
+- [x] **Adım 5.1** — `service/UserService.java` oluştur
   - `getUserByEmail(String email)` → User entity döner
   - `existsByEmail(String email)` → Boolean
-- [ ] **Adım 5.2** — `service/PostService.java` oluştur
+- [x] **Adım 5.2** — `service/PostService.java` oluştur
   - `createPost(CreatePostRequest, User)` → PostResponse
   - `getAllPosts()` → List\<PostResponse\>
   - `getPostById(Long id)` → PostResponse
   - `updatePost(Long id, UpdatePostRequest, User)` → PostResponse
   - `deletePost(Long id, User)` → void
   - `getMyPosts(User)` → List\<PostResponse\>
-- [ ] **Adım 5.3** — Yetkilendirme kontrolü ekle
+- [x] **Adım 5.3** — Yetkilendirme kontrolü ekle
   - Güncelleme ve silme işlemlerinde: "Bu ilan bu kullanıcıya mı ait?" kontrolü
-- [ ] **Adım 5.4** — Commit: `feat: add service layer with business logic`
+- [x] **Adım 5.4** — Commit: `feat: add service layer with business logic`
 
 ### 📦 Çıktı
 - Tüm iş mantığı Service katmanında
