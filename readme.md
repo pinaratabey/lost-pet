@@ -1,25 +1,34 @@
-# LostPet AI - Geliştirme Planı 
+# LostPet AI 🐾
 
-# Projenin Amacı
+LostPet AI, kayıp ve bulunan evcil hayvan ilanlarının yönetilebildiği, **Spring Boot tabanlı bir backend uygulamasıdır**.
 
-Bu proje yalnızca bir "kayıp evcil hayvan platformu" geliştirmek için değil, gerçek bir backend geliştiricisinin kullandığı teknolojileri adım adım öğrenmek amacıyla hazırlanacaktır.
+Proje, yalnızca bir kayıp hayvan platformu geliştirmekten ziyade, gerçek bir backend projesinde kullanılan teknolojileri **aşamalı olarak öğrenmek ve uygulamak** amacıyla geliştirilmektedir.
 
-Öncelik:
-
-- Spring Boot ekosistemini öğrenmek
-- REST API geliştirmek
-- PostgreSQL kullanmak
-- Git ile versiyon kontrolü yapmak
-- Docker ile projeyi ayağa kaldırmak
-- Gerçek proje geliştirme sürecini deneyimlemek
-
-Yapay zekâ, harita ve gelişmiş özellikler ilk aşamada hedef değildir.
+Proje geliştikçe yeni teknolojiler ve özellikler eklenerek basit bir REST API'den daha kapsamlı bir uygulamaya dönüştürülmesi hedeflenmektedir.
 
 ---
 
-# Teknoloji Yığını
+## 🎯 Project Goals
 
-## Backend
+Bu projede temel hedefler:
+
+- Spring Boot ekosistemini öğrenmek
+- RESTful API geliştirmek
+- PostgreSQL ve JPA/Hibernate kullanmak
+- Authentication ve Authorization süreçlerini öğrenmek
+- Git ve GitHub ile proje geliştirme sürecini yönetmek
+- Docker ile uygulamayı containerize etmek
+- Unit testing ve deployment süreçlerini öğrenmek
+- İlerleyen aşamalarda AI ve harita teknolojilerini projeye entegre etmek
+
+Proje, tüm özellikleri baştan geliştirmek yerine **aşamalı olarak büyütülecektir.**
+
+---
+
+# 🛠️ Tech Stack
+
+### Backend
+
 - Java 21
 - Spring Boot 3
 - Spring Web
@@ -27,24 +36,28 @@ Yapay zekâ, harita ve gelişmiş özellikler ilk aşamada hedef değildir.
 - Spring Security
 - JWT
 - Hibernate
-- Validation
+- Bean Validation
 - Lombok
-- Swagger (OpenAPI)
+- Swagger / OpenAPI
 
-## Veritabanı
+### Database
+
 - PostgreSQL
 
-## Frontend
+### Frontend
+
 - React
 - Tailwind CSS
 
-## DevOps
+### DevOps
+
 - Git
 - GitHub
 - Docker
 - Docker Compose
 
-## Gelecekte
+### Future Technologies
+
 - FastAPI
 - OpenCV
 - CLIP
@@ -53,114 +66,173 @@ Yapay zekâ, harita ve gelişmiş özellikler ilk aşamada hedef değildir.
 
 ---
 
-# Geliştirme Aşamaları
+# 🚀 Development Roadmap
 
-## V1 - Spring Boot Öğrenme
+## V1 — Core Backend
 
-### Amaç
-Temel backend geliştirme becerilerini kazanmak.
+**Goal:** Spring Boot ve temel backend geliştirme konularını öğrenmek.
 
-### Özellikler
+### User Management
 
-### Kullanıcı
-- Kayıt Ol
-- Giriş Yap
-- JWT Authentication
+- User registration
+- User login
+- JWT-based authentication
+- Role-based authorization
 
-### İlan
-- İlan oluştur
-- İlan düzenle
-- İlan sil
-- İlan listele
-- İlan detayı
+### Pet Listings
 
-### İlan Alanları
+- Create a listing
+- Update a listing
+- Delete a listing
+- List all listings
+- View listing details
 
-- Başlık
-- Açıklama
-- Hayvan Türü
-- Şehir
-- İlçe
-- İletişim Bilgisi
-- Durum
-- Oluşturulma Tarihi
+### Listing Fields
 
-> Not: Konum ilk aşamada sadece şehir ve ilçe olarak tutulacaktır.
+Her ilan aşağıdaki temel bilgileri içerecektir:
 
----
+- Title
+- Description
+- Animal Type
+- City
+- District
+- Contact Information
+- Status
+- Created At
 
-# Öğrenilecek Konular
+> İlk versiyonda konum bilgisi yalnızca şehir ve ilçe olarak tutulacaktır.
 
-- Controller
-- Service
-- Repository
-- DTO
+### V1 Learning Topics
+
 - Entity
+- DTO
+- Repository
+- Service
+- Controller
+- REST API
+- JPA / Hibernate
+- PostgreSQL
+- Entity Relationships
 - Validation
 - Exception Handling
-- REST API
-- PostgreSQL
-- JPA
-- Entity İlişkileri
+- Spring Security
 - JWT
-- Swagger
-- Git
-- Docker
+- Swagger / OpenAPI
 
 ---
 
-# V2 - Projeyi Geliştirme
+# 📸 V2 — Application Features
 
-Yeni özellikler:
+İlk backend yapısı tamamlandıktan sonra uygulamaya daha gerçekçi özellikler eklenecektir.
 
-- Fotoğraf yükleme (MultipartFile)
-- uploads klasörüne dosya kaydetme
-- Şehre göre filtreleme
-- Arama
-- Sayfalama (Pagination)
+### Planned Features
+
+- Photo upload
+- MultipartFile
+- Local file storage
+- City-based filtering
+- Search
+- Pagination
+
+Bu aşamada özellikle **file handling, filtering ve pagination** konularının öğrenilmesi hedeflenmektedir.
 
 ---
 
-# V3 - Üretim Seviyesine Yaklaştırma
+# ⚙️ V3 — Production-Oriented Development
+
+Uygulamanın daha gerçek bir deployment sürecine yaklaştırılması hedeflenmektedir.
+
+### Planned Features
 
 - Docker Compose
 - Environment Variables
 - Logging
-- Unit Test
+- Unit Tests
+- Integration Tests
 - GitHub Actions
-- Deploy (Railway / Render)
+- CI/CD
+- Deployment
+
+### Possible Deployment Platforms
+
+- Railway
+- Render
 
 ---
 
-# V4 - AI Destekli Sürüm
+# 🤖 V4 — AI & Smart Features
 
-- Görsel benzerlik analizi
-- Tür tahmini
+Temel backend ve deployment süreçleri tamamlandıktan sonra AI destekli özellikler araştırılacaktır.
+
+### Planned Features
+
+- Visual similarity analysis
+- Animal type classification
 - OCR
-- Akıllı eşleşme önerileri
-- Harita desteği
-- Bildirim sistemi
+- Smart lost/found matching
+- Map integration
+- Notification system
+
+### Possible Technologies
+
+- FastAPI
+- OpenCV
+- CLIP
+- Leaflet
+
+> AI özellikleri projenin ilk aşamasının bir parçası değildir. Öncelik, sağlam bir backend altyapısı oluşturmaktır.
 
 ---
 
-# Öğrenme Yol Haritası
+# 📚 Learning Roadmap
+
+Proje aşağıdaki sırayla geliştirilecektir:
 
 1. Spring Boot
 2. REST API
 3. PostgreSQL
-4. JPA
-5. JWT
-6. Validation
-7. Swagger
-8. Git
-9. Docker
-10. React
-11. Fotoğraf yükleme
-12. Deploy
-13. AI entegrasyonu
+4. JPA / Hibernate
+5. Entity Relationships
+6. DTO & Mapper
+7. Validation
+8. Exception Handling
+9. Spring Security
+10. JWT
+11. Swagger / OpenAPI
+12. Git & GitHub
+13. Docker
+14. React
+15. File Upload
+16. Testing
+17. CI/CD
+18. Deployment
+19. AI Integration
 
 ---
 
-# Nihai Hedef
+# 📂 Project Structure
 
-Projeyi tek seferde büyük hale getirmek yerine, her sürümde yeni bir teknoloji öğrenerek ilerlemek. Her aşamanın sonunda çalışan bir uygulama elde etmek ve bunu GitHub üzerinde pro
+Proje geliştikçe backend tarafında katmanlı bir mimari kullanılacaktır.
+
+```text
+lostpet/
+│
+├── backend/
+│   └── src/
+│       └── main/
+│           └── java/
+│               └── com/lostpet/
+│                   ├── controller/
+│                   ├── service/
+│                   ├── repository/
+│                   ├── entity/
+│                   ├── dto/
+│                   ├── mapper/
+│                   ├── security/
+│                   ├── exception/
+│                   └── config/
+│
+├── frontend/
+│
+├── docker-compose.yml
+└── README.md
