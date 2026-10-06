@@ -1,4 +1,4 @@
-# LostPet AI - Geliştirme Planı (Öğrenme Odaklı)
+# LostPet AI - Geliştirme Planı 
 
 # Projenin Amacı
 
